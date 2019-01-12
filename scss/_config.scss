@@ -1,4 +1,4 @@
-$primary-color: #444;
+$primary-color: #fff;
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(https://github.com/bradtraversy/modern_portfolio/blob/master/dist/img/background.jpg?raw=true);
@@ -25,6 +25,15 @@ $background-opacity: 0.6s;
         z-index: -1;
       }
     }
+  }
+}
+
+//set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
   }
 }
 
